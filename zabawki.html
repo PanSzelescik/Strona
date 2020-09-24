@@ -13,6 +13,7 @@
 </head>
 <body>
     <button onclick=alert("Witam")>Dzień dobry</button>
+    <p id="seconds">Straciłeś na tej stronie 0 sekund życia</p>
     <table>
         <caption>
             <input id="schemat" type="number" value="1"/>
@@ -62,6 +63,8 @@
     <p id="cyferki">0</p>
 
     <script>
+        let i = 0;
+
         function get(id) {
             return document.getElementById(id);
         }
@@ -90,6 +93,10 @@
         }
         
         setInterval(() => get("cyferki").innerText = Math.random(), 1);
+        setInterval(() => {
+            i = i + 1;
+            get("seconds").innerText = "Straciłeś na tej stronie " + i + " sekund życia";
+        }, 1000);
 
         function schemat1_8() {
             const a = +document.getElementById("schemat").value;
