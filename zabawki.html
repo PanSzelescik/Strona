@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>Strona - zabawki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/body.css">
+    <style>
+        input, button {
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick=alert("Witam")>Dzień dobry</button>
+    <table>
+        <caption>
+            <input id="schemat" type="number" value="1"/>
+        </caption>
+        <thead>
+            <tr>
+                <th>1.8</th>
+                <th>1.9</th>
+                <th>1.10</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button onclick=schemat1_8()>Oblicz 1.8</button></td>
+                <td><button onclick=schemat1_9()>Oblicz 1.9</button></td>
+                <td><button onclick=schemat1_10()>Oblicz 1.10</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tr>
+            <td colspan="4" id="wynik" align="left">0</td>
+        </tr>
+        <tr>
+            <td width="25%">
+                <button onclick=dodaj()>Dodaj</button>
+            </td>
+            <td width="25%">
+                <button onclick=odejmij()>Odejmij</button>
+            </td>
+            <td width="25%">
+                <button onclick=pomnoz()>Pomnóż</button>
+            </td>
+            <td width="25%">
+                <button onclick=reset()>Reset</button>
+            </td>
+        </tr>
+        <tr>
+            <td width="25%">
+                <input id="dodawanie" type="number" value="1"/>
+            </td>
+            <td width="25%">
+                <input id="odejmowanie" type="number" value="1"/>
+            </td>
+        </tr>
+    </table>
+    <p id="cyferki">0</p>
+
+    <script>
+        function get(id) {
+            return document.getElementById(id);
+        }
+
+		function dodaj() {
+            var wynik = get("wynik");
+            var multiplier = get("dodawanie");
+			wynik.innerText = +wynik.innerText + +multiplier.value;
+		}
+
+		function odejmij() {
+            var wynik = get("wynik");
+            var multiplier = get("odejmowanie");
+			wynik.innerText = +wynik.innerText - +multiplier.value;
+		}
+
+		function pomnoz() {
+			var wynik = get("wynik");
+			var text = +wynik.innerText;
+			wynik.innerText = text * text;
+		}
+
+		function reset() {
+			var wynik = get("wynik");
+			wynik.innerText = "0";
+        }
+        
+        setInterval(() => get("cyferki").innerText = Math.random(), 1);
+
+        function schemat1_8() {
+            const a = +document.getElementById("schemat").value;
+            console.log("Schemat 1.8");
+            for (let i = a; i < a + 10; i++) {
+                console.log(i);
+            }
+        }
+
+        function schemat1_9() {
+            const n = +document.getElementById("schemat").value;
+            console.log("Schemat 1.9");
+            let a = 0;
+            for (let i = n; i < n + 10; i++) {
+                a = a + i;
+            }
+            console.log(a);
+        }
+
+        function schemat1_10() {
+            const n = +document.getElementById("schemat").value;
+            console.log("Schemat 1.10");
+            let a = 0;
+            for (let i = n; i < n + 10; i++) {
+                if (i % 3 === 0) {
+                    a = a + i;
+                }
+            }
+            console.log(a);
+        }
+	</script>
+</body>
+</html>

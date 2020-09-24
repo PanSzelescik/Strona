@@ -1,0 +1,13 @@
+body {
+    font-family: Roboto;
+}
+.text {
+    font-size: 50px;
+    text-align: center;
+}
+.add-image {
+    background-image: url("img/google.png");
+}
+.background-pink {
+    background-color: #ff00ff;
+}

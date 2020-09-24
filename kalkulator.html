@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<title>Strona - kalkulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/body.css">
+    <style>
+        button {
+            height: 30px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <table border="0">
+        <tbody>
+            <tr>
+                <td colspan="4" id="wynik" align="left">0</td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <button id="C" onclick="onButtonClick(this)">C</button>
+                </td>
+                <td>
+                    <button id="√" onclick="onButtonClick(this)">√</button>
+                </td>
+                <td>
+                    <button id="/" onclick="onButtonClick(this)">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="7" onclick="onButtonClick(this)">7</button>
+                </td>
+                <td>
+                    <button id="8" onclick="onButtonClick(this)">8</button>
+                </td>
+                <td>
+                    <button id="9" onclick="onButtonClick(this)">9</button>
+                </td>
+                <td>
+                    <button id="*" onclick="onButtonClick(this)">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="4" onclick="onButtonClick(this)">4</button>
+                </td>
+                <td>
+                    <button id="5" onclick="onButtonClick(this)">5</button>
+                </td>
+                <td>
+                    <button id="6" onclick="onButtonClick(this)">6</button>
+                </td>
+                <td>
+                    <button id="-" onclick="onButtonClick(this)">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="1" onclick="onButtonClick(this)">1</button>
+                </td>
+                <td>
+                    <button id="2" onclick="onButtonClick(this)">2</button>
+                </td>
+                <td>
+                    <button id="3" onclick="onButtonClick(this)">3</button>
+                </td>
+                <td>
+                    <button id="+" onclick="onButtonClick(this)">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="0" onclick="onButtonClick(this)">0</button>
+                </td>
+                <td>
+                    <button id="." onclick="onButtonClick(this)">.</button>
+                </td>
+                <td>
+                    <button id="+/-" onclick="onButtonClick(this)">+/-</button>
+                </td>
+                <td>
+                    <button id="=" onclick="onButtonClick(this)">=</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function getWynik() {
+            return document.getElementById("wynik");
+        }
+
+        function onButtonClick(button) {
+            try {
+                var wynik = getWynik();
+                var text = wynik.innerText;
+                switch (button.id) {
+                    case "C":
+                        clear(wynik);
+                        break;
+                    case "+/-":
+                        if (wynik.innerText === "0") {
+                            return;
+                        }
+
+                        if (text.startsWith("-")) {
+                            wynik.innerText = text.substring(1);
+                        } else {
+                            wynik.innerText = "-" + text;
+                        }
+                        break;
+                    case "0":
+                        if (text === "0" && button.id === "0") {
+                            break;
+                        }
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "7":
+                    case "8":
+                    case "9":
+                        if (text === "0") {
+                            wynik.innerText = button.id;
+                            break;
+                        }
+                    case ".":
+                    case "+":
+                    case "-":
+                    case "*":
+                    case "/":
+                        wynik.innerText = text + button.id;
+                        break;
+                    case "=":
+                        wynik.innerText = eval(text);
+                        break;
+                    case "√":
+                        sqrt(wynik);
+                        break;
+                }
+            } catch (err) {
+                console.error(err);
+                wynik.innerText = "Błąd";
+                setTimeout(() => clear(wynik), 2000);
+            }
+        }
+
+        function sqrt(wynik = getWynik()) {
+            wynik.innerText = Math.sqrt(eval(wynik.innerText));
+        }
+
+        function clear(wynik = getWynik()) {
+            wynik.innerText = "0";
+        }
+    </script>
+</body>
+</html>
