@@ -20,10 +20,10 @@
             </tr>
             <tr>
                 <td>
-
+                    <button id="C" onclick="onButtonClick(this)">C</button>
                 </td>
                 <td>
-                    <button id="C" onclick="onButtonClick(this)">C</button>
+                    <button id="**" onclick="onButtonClick(this)">**</button>
                 </td>
                 <td>
                     <button id="√" onclick="onButtonClick(this)">√</button>
@@ -136,7 +136,10 @@
                     case "-":
                     case "*":
                     case "/":
-                        wynik.innerText = text + button.id;
+                    case "**":
+                        if (!text.endsWith(".") && !text.endsWith("+") && !text.endsWith("-") && !text.endsWith("*") && !text.endsWith("/")) {
+                            wynik.innerText = text + button.id;
+                        }
                         break;
                     case "=":
                         wynik.innerText = eval(text);
