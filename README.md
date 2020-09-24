@@ -1,2 +1,2 @@
 # Strona
-Stronka
+Stronka szkolna
