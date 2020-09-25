@@ -30,6 +30,8 @@
                 <td><button onclick=schemat1_8()>Oblicz 1.8</button></td>
                 <td><button onclick=schemat1_9()>Oblicz 1.9</button></td>
                 <td><button onclick=schemat1_10()>Oblicz 1.10</button></td>
+                <td><button onclick=dodaj1_11()>Dodaj do 1.11</button></td>
+                <td><button onclick=schemat1_11()>Oblicz 1.11</button></td>
             </tr>
         </tbody>
     </table>
@@ -126,6 +128,26 @@
                 }
             }
             console.log(a);
+        }
+
+        let liczby = [];
+        let suma = 0;
+
+        function dodaj1_11() {
+            const a = +document.getElementById("schemat").value;
+            liczby.push(a);
+            console.log(liczby);
+        }
+
+        function schemat1_11() {
+            console.log("Schemat 1.11");
+            for (let i = 0; i < liczby.length; i++) {
+                suma = suma + liczby[i];
+            }
+            const srednia = suma / liczby.length;
+            console.log(srednia);
+            liczby = [];
+            suma = 0;
         }
 	</script>
 </body>
