@@ -17,6 +17,7 @@
     <table>
         <caption>
             <input id="schemat" type="number" value="1"/>
+            <input id="schemat2" type="number" value="1"/>
         </caption>
         <thead>
             <tr>
@@ -32,6 +33,7 @@
                 <td><button onclick=schemat1_10()>Oblicz 1.10</button></td>
                 <td><button onclick=dodaj1_11()>Dodaj do 1.11</button></td>
                 <td><button onclick=schemat1_11()>Oblicz 1.11</button></td>
+                <td><button onclick=schemat1_13()>Oblicz 1.13</button></td>
             </tr>
         </tbody>
     </table>
@@ -152,6 +154,20 @@
             console.log(srednia);
             liczby = [];
             suma = 0;
+        }
+
+        function schemat1_13() {
+            const a = get("schemat").value;
+            const b = get("schemat2").value;
+            let nwd = 1;
+            let i = 1;
+            while (!(i > a || i > b)) {
+                i = i + 1;
+                if (a % i === 0 && b % i === 0) {
+                    nwd = i;
+                }
+            }
+            console.log(nwd);
         }
     </script>
 </body>
