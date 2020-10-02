@@ -159,33 +159,25 @@
 
         function schemat1_13() {
             console.log("Schemat 1.13");
-            const a = get("schemat").value;
-            const b = get("schemat2").value;
-            let nwd = 1;
-            let i = 1;
-            while (!(i > a || i > b)) {
-                i = i + 1;
-                if (a % i === 0 && b % i === 0) {
-                    nwd = i;
+            let a = +get("schemat").value;
+            let b = +get("schemat2").value;
+            while (a !== b) {
+                if (a > b) {
+                    a = a - b;
+                } else {
+                    b = b - a;
                 }
             }
-            console.log(nwd);
+            console.log(a);
+            return a;
         }
 
         function schemat1_14() {
             console.log("Schemat 1.14");
-            const a = get("schemat").value;
-            const b = get("schemat2").value;
-            const wielokrotnosci_a = [];
-            const wielokrotnosci_b = [];
-            let i = 0;
-            let nww = 0;
-            while (!nww) {
-                i = i + 1;
-                wielokrotnosci_a.push(a * i);
-                wielokrotnosci_b.push(b * i);
-                nww = wielokrotnosci_a.find(w_a => wielokrotnosci_b.includes(w_a));
-            }
+            const a = +get("schemat").value;
+            const b = +get("schemat2").value;
+            const nwd = schemat1_13();
+            const nww = a*b/nwd;
             console.log(nww);
         }
     </script>
