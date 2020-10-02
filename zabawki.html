@@ -34,6 +34,7 @@
                 <td><button onclick=dodaj1_11()>Dodaj do 1.11</button></td>
                 <td><button onclick=schemat1_11()>Oblicz 1.11</button></td>
                 <td><button onclick=schemat1_13()>Oblicz 1.13</button></td>
+                <td><button onclick=schemat1_14()>Oblicz 1.14</button></td>
             </tr>
         </tbody>
     </table>
@@ -168,6 +169,22 @@
                 }
             }
             console.log(nwd);
+        }
+
+        function schemat1_14() {
+            const a = get("schemat").value;
+            const b = get("schemat2").value;
+            const wielokrotnosci_a = [];
+            const wielokrotnosci_b = [];
+            let i = 0;
+            let x = 0;
+            while (!x) {
+                i = i + 1;
+                wielokrotnosci_a.push(a * i);
+                wielokrotnosci_b.push(b * i);
+                x = wielokrotnosci_a.find(w_a => wielokrotnosci_b.includes(w_a));
+            }
+            console.log(x);
         }
     </script>
 </body>
