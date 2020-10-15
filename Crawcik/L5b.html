@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8" />
+        <title>L5</title>
+        <style>
+            img{
+                border: 0px solid white;
+                border-radius: 5%;
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <img width="100%" src="IMG/uklad.jpg" alt="Układ słoneczny" usemap="#mapa1">
+        <map  name="mapa1">
+            <!-- Słóńce -50,50,350 -->
+            <area shape="circle" coords="-50,50,350", href="https://pl.wikipedia.org/wiki/S%C5%82o%C5%84ce">
+            <!-- Merkury 282,262,11 -->
+            <area shape="circle" coords="282,262,11", href="https://pl.wikipedia.org/wiki/Merkury">
+            <!-- Wenus 333,283,20 -->
+            <area shape="circle" coords="333,283,24", href="https://pl.wikipedia.org/wiki/Wenus">
+            <!-- Ziemia 412,310,38 -->
+            <area shape="circle" coords="410,310,32", href="https://pl.wikipedia.org/wiki/Ziemia">
+            <!-- Mars 496,332,21 -->
+            <area shape="circle" coords="495,332,21", href="https://pl.wikipedia.org/wiki/Mars">
+            <!-- Jowisz 665,385,100 -->
+            <area shape="circle" coords="663,385,100", href="https://pl.wikipedia.org/wiki/Jowisz">
+            <!-- Saturn 875,452,54 -->
+            <area shape="circle" coords="875,452,65", href="https://pl.wikipedia.org/wiki/Saturn">
+            <!-- Uran 1045,520,62 -->
+            <area shape="circle" coords="1045,520,62", href="https://pl.wikipedia.org/wiki/Uran">
+            <!-- Neptun 1120,570,46 -->
+            <area shape="circle" coords="1200,570,68", href="https://pl.wikipedia.org/wiki/Neptun">
+        </map>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="JS/imageMapResizer.min.js"></script>
+        <script type="text/javascript">
+
+            $('map').imageMapResize();
+    
+        </script>
+    </body>
+</html>
