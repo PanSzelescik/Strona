@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8" />
+        <title>L5</title>
+        <style>
+            img{
+                border: 0px solid white;
+                border-radius: 5%;
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <img width="100%" src="IMG/computer-inside.png" usemap="#mapa2">
+        <map name="mapa2">
+            <area title="Procesor" href="https://pl.wikipedia.org/wiki/Procesor" coords="1145,503,1252,612" shape="rect">
+            <area title="Pamięć RAM" href="https://pl.wikipedia.org/wiki/Pami%C4%99%C4%87_operacyjna" coords="1319,459,1422,663" shape="rect">
+            <area title="Karty rozszerzeń" href="https://pl.wikipedia.org/wiki/Karta_rozszerzenia" coords="1111,717,1311,857" shape="rect">
+            <area title="Płyta główna" href="https://pl.wikipedia.org/wiki/P%C5%82yta_g%C5%82%C3%B3wna" coords="1091,402,1497,889" shape="rect">
+            <area title="Dysk twardy" href="https://pl.wikipedia.org/wiki/Nap%C4%99d_optyczny" coords="1578,525,1861,726" shape="rect">
+            <area title="Zasilacz" href="https://pl.wikipedia.org/wiki/Zasilacz_komputera" coords="1424,394,1099,265" shape="rect">
+            <area title="Napęd optyczny" href="https://pl.wikipedia.org/wiki/Dysk_twardy" coords="1578,271,1863,473" shape="rect">
+            <area title="Monitor" href="https://pl.wikipedia.org/wiki/Monitor_komputera" coords="82,241,889,806" shape="rect">
+            <area title="Klawiatura" href="https://pl.wikipedia.org/wiki/Klawiatura_komputerowa" coords="80,1091,931,1336" shape="rect">
+            <area title="Myszka" href="https://pl.wikipedia.org/wiki/Mysz_komputerowa" coords="1052,1211,1131,1336" shape="rect">
+        </map>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="JS/imageMapResizer.min.js"></script>
+        <script type="text/javascript">
+
+            $('map').imageMapResize();
+
+        </script>
+    </body>
+</html>

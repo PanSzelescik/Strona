@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8" />
+        <title>L5</title>
+        <style>
+            img{
+                border: 0px solid white;
+                border-radius: 5%;
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <img height="100%" src="IMG/Wojewodztwa.svg" usemap="#mapa3">
+        <map name="mapa3">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_dolno%C5%9Bl%C4%85skie" coords="469,994,170,1131,110,1282,492,1575,736,1153" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_opolskie" coords="553,1477,715,1195,911,1257,857,1539,749,1625" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_%C5%9Bl%C4%85skie" coords="782,1601,858,1541,913,1240,1135,1328,1170,1457,997,1635,1088,1745,990,1836" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_ma%C5%82opolskie" coords="1088,1752,991,1623,1172,1439,1275,1544,1445,1493,1492,1794,1166,1914" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_podkarpackie" coords="1495,1795,1442,1489,1595,1318,1759,1471,1938,1493,1796,1921" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_lubuskie" coords="1949,1489,1763,1463,1558,1322,1576,931,1811,834,1938,886,2057,1389,2020,1456" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_%C5%9Bwi%C4%99tokrzyskie" coords="1595,1296,1275,1165,1140,1326,1174,1426,1278,1549,1446,1486" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_%C5%82%C3%B3dzkie" coords="1129,1307,1282,1158,1327,1016,1159,853,1040,819,757,1210,969,1262" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_wielkopolskie" coords="768,1218,343,890,388,573,574,391,667,432,697,700,1021,841" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_lubuskie" coords="380,551,89,704,112,1169,455,987" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_zachodniopomorskie" coords="19,722,37,276,544,78,566,384,403,566" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_pomorskie" coords="846,4,555,78,563,465,824,369,1010,424,1107,104" shape="poly">
+            <area href="https://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo_warmi%C5%84sko-mazurskie" coords="1111,108,1017,428,1107,570,1237,566,1584,439,1714,298,1703,134" shape="poly">
+        </map>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="JS/imageMapResizer.min.js"></script>
+        <script type="text/javascript">
+
+            $('map').imageMapResize();
+
+        </script>
+    </body>
+</html>
