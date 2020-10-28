@@ -6,7 +6,7 @@ body {
     text-align: center;
 }
 .add-image {
-    background-image: url("img/google.png");
+    background-image: url("/src/img/google.png");
 }
 .background-pink {
     background-color: #ff00ff;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
 	<title>Strona - zabawki</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/PanSzelescik/body.css">
+    <link rel="stylesheet" href="/src/body.css">
     <style>
         input, button {
             width: 90px;
@@ -96,7 +96,7 @@
 			var wynik = get("wynik");
 			wynik.innerText = "0";
         }
-        
+
         setInterval(() => get("cyferki").innerText = Math.random(), 1);
         setInterval(() => {
             i = i + 1;
