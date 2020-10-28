@@ -25,7 +25,8 @@ server.use(logger((tokens, req, res) => [
     tokens.method(req, res),
     getStatusWithColor(tokens.status(req, res)),
     tokens.url(req, res),
-    tokens['response-time'](req, res) + ' ms'
+    tokens['response-time'](req, res) + ' ms',
+    JSON.stringify(req.body)
 ].join(' ')));
 
 server.use(express.json());
@@ -33,8 +34,8 @@ server.use(express.urlencoded({extended: false}));
 server.use(cookieParser());
 server.use(compression());
 
-server.use('/index', (req, res) => res.redirect(301, '/src'));
 server.use('/src', express.static(path.join(__dirname, '../src')));
+server.use('/', (req, res) => res.redirect(301, '/src'));
 
 server.use((req, res, next) => next(createError(404)));
 
