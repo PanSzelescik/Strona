@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Formularz - ankieta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/body.css">
+</head>
+<body>
+    <form name="ankieta" action="/" method="post">
+        <input type="radio" id="mezczyzna" name="gender" value="male">
+        <label for="mezczyzna">Mężczyzna </label><br />
+        <input type="radio" id="kobieta" name="gender" value="female">
+        <label for="kobieta">Kobieta </label><br/>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Inne/wolę nie podawać </label><br />
+
+
+
+
+
+        <input type="submit" name="send" id="send" value="Wyślij" />
+        <input type="reset" name="reset" id="reset" value="Wyczyść" />
+    </form>
+</body>
+</html>
