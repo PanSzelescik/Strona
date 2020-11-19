@@ -1,0 +1,19 @@
+p {
+    color: gray;
+}
+
+.kolorek {
+    color: darkgray;
+}
+
+#kolor {
+    color: dimgray;
+}
+
+#kolor2 {
+    color: lightgray;
+}
+
+#kolor3 {
+    color: slategray;
+}
