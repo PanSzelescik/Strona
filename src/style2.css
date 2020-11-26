@@ -1,19 +1,30 @@
 p {
     color: gray;
+    font-family: "Bauhaus 93", serif;
+    border-style: solid;
+    background-color: lightgray;
 }
 
-.kolorek {
-    color: darkgray;
+.klasa1 {
+    color: cyan;
+    border-radius: 100px 70px;
 }
 
-#kolor {
-    color: dimgray;
+#id1 {
+    color: #FF3028;
+    margin: 25px 230px;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
-#kolor2 {
+#id2 {
     color: lightgray;
+    text-align: right;
+    word-spacing: -10px;
 }
 
-#kolor3 {
-    color: slategray;
+#id3 {
+    color: springgreen;
+    margin: 5px;
 }

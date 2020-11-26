@@ -2,20 +2,17 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Style</title>
-    <link rel="stylesheet" href="style.css" title="Główny">
-    <link rel="alternate stylesheet" href="style2.css" title="Żałoba">
-    <style>
-        p {
-            border-style: dashed;
-            border-color: black;
-        }
-    </style>
+    <link rel="alternate stylesheet" href="style.css" title="Styl 1">
+    <link rel="stylesheet" href="style2.css" title="Styl 2">
+    <link rel="alternate stylesheet" href="style3.css" title="Styl 3">
 </head>
 <body>
-    <p>Tekst 1</p> <!-- magenta -->
-    <p class="kolorek">Tekst 2</p> <!-- blue -->
-    <p id="kolor">Tekst 3</p> <!-- darkred -->
-    <p style="color: cyan;">Tekst 4</p> <!-- cyan -->
-    <p class="kolorek" id="kolor2" style="color: coral;">Tekst 5</p> <!-- coral -->
-    <p class="kolorek" id="kolor3">Tekst 6</p> <!-- mediumorchid -->
+    <p>Tekst pierwszy</p>
+    <p class="klasa1">To jest troche dłuzszy tekst drugi</p>
+    <p id="id1">Tekst 3</p>
+    <ul>
+        <li><p style="color: blue; text-decoration: underline overline #FF3028;">Ten napis zawsze bedzie niebieski</p></li>
+        <li><p class="klasa1" id="id2" style="color: orange;">Tekst piaty z kolorem pomaranczowym</p></li>
+    </ul>
+    <p class="klasa1" id="id3">Ostatni tekst</p>
 </body>

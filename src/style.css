@@ -1,19 +1,38 @@
 p {
     color: magenta;
+    font-family: "Comic Sans MS", serif;
+    border-radius: 50px;
 }
 
-.kolorek {
-    color: blue;
+.klasa1 {
+    color: cyan;
+    border-style: dashed;
+    border-color: black;
+    padding-left: 150px;
+    text-indent: 20px;
 }
 
-#kolor {
+#id1 {
     color: darkred;
+    font-size: 60px;
+    text-align: center;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Domestic_Goose.jpg/1200px-Domestic_Goose.jpg");
+    height: 500px;
+    cursor: crosshair;
+    letter-spacing: -15px;
 }
 
-#kolor2 {
+#id2 {
     color: green;
+    line-height: 2;
+    letter-spacing: 1px;
+    background-color: #9f8500;
+    margin: 10px 30px;
 }
 
-#kolor3 {
+#id3 {
     color: mediumorchid;
+    margin-top: 50px;
+    text-transform: capitalize;
+    word-spacing: 15px;
 }

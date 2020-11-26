@@ -1,0 +1,31 @@
+p {
+    color: #654468;
+    border-left-style: solid;
+    border-right-style: ridge;
+    border-top-style: groove;
+    border-bottom-style: double;
+}
+
+li {
+    list-style-type: circle;
+}
+
+.klasa1 {
+    color: #247389;
+}
+
+#id1 {
+    color: #24894c;
+    font-family: "Agency FB", serif;
+}
+
+#id2 {
+    margin: 18px 315px;
+    cursor: pointer;
+}
+
+#id3 {
+    font-size: 25px;
+    text-align: right;
+    text-transform: uppercase;
+}
