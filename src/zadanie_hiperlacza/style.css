@@ -1,0 +1,20 @@
+nav {
+    display: flex;
+    height: auto;
+    justify-content: right;
+}
+
+nav a {
+    display: block;
+    color: brown;
+    margin: 15px 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 16px;
+    padding: 5px 5px;
+}
+
+nav a.active {
+    color: blue;
+}
